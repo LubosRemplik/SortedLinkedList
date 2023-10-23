@@ -1,5 +1,7 @@
 # Sorted Linked List
 
+[![Tests](https://github.com/LubosRemplik/SortedLinkedList/actions/workflows/tests.yaml/badge.svg)](https://github.com/LubosRemplik/SortedLinkedList/actions/workflows/tests.yaml)
+
 Library which works with LinkedList structure and keeps items sorted.
 
 ## Installation
