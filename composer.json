@@ -1,0 +1,23 @@
+{
+    "name": "lubos/sorted-linked-list",
+    "type": "library",
+    "require-dev": {
+        "vimeo/psalm": "^5.15",
+        "phpunit/phpunit": "^10.4",
+        "symplify/easy-coding-standard": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lubos\\SortedLinkedList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luboš Remplík",
+            "email": "lubos@hkdev.cz"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    }
+}
