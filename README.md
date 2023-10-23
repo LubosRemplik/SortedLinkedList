@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/LubosRemplik/SortedLinkedList/actions/workflows/tests.yaml/badge.svg)](https://github.com/LubosRemplik/SortedLinkedList/actions/workflows/tests.yaml)
 
-Library which works with LinkedList structure and keeps items sorted.
+Library which works with LinkedList data structure and keeps nodes sorted.
 
 ## Installation
 
@@ -16,9 +16,9 @@ composer require lubos/sorted-linked-list
 use Lubos\SortedList\SortedList;
 
 $list = new SortedList('string', ['Ebay', 'Amazon']);
-$list->add('ShipMonk');
+$list->insert('ShipMonk');
 
-print_r($list->getItems());
+print_r($list->print());
 
 // Output:
 // Array
