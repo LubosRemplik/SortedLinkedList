@@ -4,6 +4,8 @@
 
 Library which works with LinkedList data structure and keeps nodes sorted.
 
+*Note:* Maybe more elegant solution would be to use `Node` interface and `StringNode` + `IntegerNode` implementations.
+
 ## Installation
 
 ```bash
@@ -13,9 +15,9 @@ composer require lubos/sorted-linked-list
 ## Usage
 
 ```php
-use Lubos\SortedList\SortedList;
+use Lubos\SortedLinkedList\SortedLinkedList;
 
-$list = new SortedList('string', ['Ebay', 'Amazon']);
+$list = new SortedLinkedList('string', ['Ebay', 'Amazon']);
 $list->insert('ShipMonk');
 
 print_r($list->print());
