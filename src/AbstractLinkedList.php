@@ -8,27 +8,52 @@ namespace Lubos\SortedLinkedList;
 abstract class AbstractLinkedList
 {
     /**
+     * @var array<int, T>
+     */
+    protected array $nodes = [];
+
+    /**
      * @param array<int, T> $nodes
      */
     public function __construct(
-        protected readonly string $type,
-        protected array $nodes = []
+        array $nodes = []
     ) {
-        sort($this->nodes);
+        foreach ($nodes as $node) {
+            $this->insert($node);
+        }
     }
 
+    /**
+     * @param T $node
+     */
+    public function insert(mixed $node): void
+    {
+        $this->nodes[] = $node;
+    }
+
+    /**
+     * @return T|null
+     */
     public function head(): mixed
     {
-        return reset($this->nodes);
+        $node = reset($this->nodes);
+        return $node === false ? null : $node;
     }
 
+    /**
+     * @return T|null
+     */
     public function current(): mixed
     {
         return current($this->nodes);
     }
 
+    /**
+     * @return T|null
+     */
     public function next(): mixed
     {
-        return next($this->nodes);
+        $node = next($this->nodes);
+        return $node === false ? null : $node;
     }
 }

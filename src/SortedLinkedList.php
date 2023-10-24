@@ -13,15 +13,30 @@ use InvalidArgumentException;
  */
 final class SortedLinkedList extends AbstractLinkedList implements LinkedList
 {
+    protected ?string $type = null;
+
+    /**
+     * @param array<int, T> $nodes
+     */
+    public function __construct(
+        array $nodes = []
+    ) {
+        parent::__construct($nodes);
+        sort($this->nodes);
+    }
+
     /**
      * @param T $node
      */
     public function insert($node): void
     {
+        if ($this->type === null) {
+            $this->type = gettype($this->head() ?? $node);
+        }
         if (gettype($node) !== $this->type) {
             throw new InvalidArgumentException();
         }
-        $this->nodes[] = $node;
+        parent::insert($node);
         sort($this->nodes);
         while (current($this->nodes) !== $node) {
             next($this->nodes);
