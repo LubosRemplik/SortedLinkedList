@@ -1,5 +1,7 @@
 # Sorted Linked List
 
+**Note:** Not really LinkedList data structure
+
 [![Tests](https://github.com/LubosRemplik/SortedLinkedList/actions/workflows/tests.yaml/badge.svg)](https://github.com/LubosRemplik/SortedLinkedList/actions/workflows/tests.yaml)
 
 Library which works with LinkedList data structure and keeps nodes sorted.
